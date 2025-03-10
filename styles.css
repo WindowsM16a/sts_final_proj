@@ -15,7 +15,8 @@
 }
 
 body{
-    padding: min(3.125rem, 7%);
+    padding: min(1.5rem, 4%);
+    overflow: hidden;
 }
 
 .country-name{
@@ -56,7 +57,7 @@ body{
 
 .grid-container{
     display: grid;
-    gap: 0.7rem;
+    gap: 1.8rem;
     border: 1px solid yellow;
     justify-content: center;
     grid-template-columns: repeat(7, 7rem);
