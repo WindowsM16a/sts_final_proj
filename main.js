@@ -248,6 +248,12 @@ const countriesArr = [
 		flag: "https://flagcdn.com/cz.svg",
 	},
 ];
+// figured out how to sort the countries too!
+// function sortCountries(countries) {
+// 	countries = countries.sort((a, b) => a.name.localeCompare(b.name));
+// 	// console.log(countries);
+// }
+// sortCountries(countriesArr);
 
 let countryCards = document.getElementById("country-cards");
 console.log(countryCards);
