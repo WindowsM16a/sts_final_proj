@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Shayne Wuver">
-    <meta name="description" content="My final project for the STS class using HTML, CSS and JavaScript">
-    <title>STS Final Project | Shayne Wuver</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Shayne Wuver" />
+		<meta
+			name="description"
+			content="My final project for the STS class using HTML, CSS and JavaScript"
+		/>
+		<title>STS Final Project | Shayne Wuver</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<header></header>
 
-    </header>
-
-    <main>
-        <div class="grid-container">
-            <div class="country">
-                <img src="https://flagcdn.com/af.svg" alt="Afghan flag">
-                <p class="country-name">
-                    Afghanistan
-                </p>
-                <!-- <p class="country-description"> description</p>
+		<main>
+            <div class="searchbar">
+                <input type="text" id="search" class="search" placeholder="Search for a country..."/>
+                <button class="searchbtn" onclick="searchCountries()">
+                    <img src="./imgs/search.png" alt="search icon">
+                </button>
+            </div>
+            
+			<div id="country-cards">
+				<!-- <div class="country">
+					<img src="https://flagcdn.com/af.svg" alt="Afghan flag" />
+					<p class="country-name">Afghanistan</p> -->
+				<!-- <p class="country-description"> description</p>
                 <p class="country-description"> description</p>
                 <p class="country-description"> description</p>
                 <p class="country-description"> description</p>
                 <p class="country-description"> description</p> -->
             </div>
-            <div class="country">
+            <!-- <div class="country">
                 <img src="https://flagcdn.com/ax.svg" alt="Aland Islands Flag">
                 <p class="country-name">
                     Aland Islands
@@ -188,13 +194,11 @@
                 <p class="country-name">
                     Bonaire, Sint Eustatius and Saba
                 </p>
-            </div>
-        </div>
-    </main>
+            </div> -->
+			</div>
+		</main>
 
-    <footer>
-
-    </footer>
-    <script src="./main.js"></script>
-</body>
+		<footer></footer>
+		<script src="./main.js"></script>
+	</body>
 </html>
