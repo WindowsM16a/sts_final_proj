@@ -144,3 +144,13 @@ input {
 		font-size: 0.55rem;
 	}
 }
+.grid-container {
+	grid-template-columns: repeat(3, 6rem);
+	grid-template-rows: repeat(10, 10rem);
+}
+.country-name {
+	font-size: 0.65rem;
+}
+.country-description {
+	font-size: 0.55rem;
+}
