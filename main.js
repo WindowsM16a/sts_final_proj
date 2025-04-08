@@ -248,12 +248,6 @@ const countriesArr = [
 		flag: "https://flagcdn.com/cz.svg",
 	},
 ];
-// figured out how to sort the countries too!
-// function sortCountries(countries) {
-// 	countries = countries.sort((a, b) => a.name.localeCompare(b.name));
-// 	// console.log(countries);
-// }
-// sortCountries(countriesArr);
 
 let countryCards = document.getElementById("country-cards");
 console.log(countryCards);
@@ -280,27 +274,15 @@ function displayCountries(countries) {
 }
 displayCountries(countriesArr);
 
-// for (const country of countriesArr) {
-// 	// console.log(country, countriesArr[country]);
-
-// 	card.innerHTML = `
-// 	<img src="${country.flag}" alt="${country.name} flag">
-// 	<p class = "country-name">
-// 	${country.name}
-// 	</p>
-// 	`;
-// 	document.getElementsByTagName;
-// 	countryCards.appendChild(card);
-// }
-
 let searchInput = document.getElementById("search");
 searchInput?.addEventListener("keydown", function (event) {
 	if (event.key === "Enter") {
 		event.preventDefault(); // Prevents form submission
-		searchCountries();
+		sortCountries();
 	}
 });
 
+// using the filter method
 document.getElementById("search").addEventListener("input", function () {
 	const searchValue = this.value.toLowerCase();
 	const filtered = countriesArr.filter((country) =>
@@ -308,3 +290,10 @@ document.getElementById("search").addEventListener("input", function () {
 	);
 	displayCountries(filtered);
 });
+
+// figured out how to sort the countries too!
+function sortCountries(countries) {
+	countries = countries.sort((a, b) => a.name.localeCompare(b.name));
+	console.log(countries);
+}
+sortCountries(countriesArr);
