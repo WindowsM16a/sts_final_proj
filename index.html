@@ -10,193 +10,30 @@
 		/>
 		<title>STS Final Project | Shayne Wuver</title>
 		<link rel="stylesheet" href="./styles.css" />
-        <link rel="shortcut icon" href="imgs/earth.png" width="32x64" type="image/x-icon">
+		<link
+			rel="shortcut icon"
+			href="imgs/earth.png"
+			width="32x64"
+			type="image/x-icon"
+		/>
 	</head>
 	<body>
 		<header></header>
 
 		<main>
-            <div class="searchbar">
-                <input type="text" id="search" class="search" placeholder="Search for a country..."/>
-                <button class="searchbtn" onclick="searchCountries()">
-                    <img src="./imgs/search.png" alt="search icon">
-                </button>
-            </div>
-            
-			<div id="country-cards">
-				<!-- <div class="country">
-					<img src="https://flagcdn.com/af.svg" alt="Afghan flag" />
-					<p class="country-name">Afghanistan</p> -->
-				<!-- <p class="country-description"> description</p>
-                <p class="country-description"> description</p>
-                <p class="country-description"> description</p>
-                <p class="country-description"> description</p>
-                <p class="country-description"> description</p> -->
-            </div>
-            <!-- <div class="country">
-                <img src="https://flagcdn.com/ax.svg" alt="Aland Islands Flag">
-                <p class="country-name">
-                    Aland Islands
-                </p>
-                
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/al.svg" alt="Albanian Flag">
-                <p class="country-name">
-                    Albania
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/dz.svg" alt="">
-                <p class="country-name">
-                    Algeria
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/as.svg" alt="American Samoa Flag">
-                <p class="country-name">
-                    America Samoa
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/ad.svg" alt="Andorra Flag">
-                <p class="country-name">
-                    Andorra
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/ao.svg" alt="Angola Flag">
-                <p class="country-name">
-                    Angola
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/ai.svg" alt="Anguilla Flag">
-                <p class="country-name">
-                    Anguilla
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/aq.svg" alt="Antarctica Flag">
-                <p class="country-name">
-                    Antarctica
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/ag.svg" alt="Antigua and Barbuda Flag">
-                <p class="country-name">
-                    Antigua and Barbuda
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/ar.svg" alt="Argentine Flag">
-                <p class="country-name">
-                    Argentina
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/am.svg" alt="Armenian Flag">
-                <p class="country-name">
-                    Armenia
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/aw.svg" alt="Aruba Flag">
-                <p class="country-name">
-                    Aruba
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/au.svg" alt="Australian Flag">
-                <p class="country-name">
-                    Australia
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/at.svg" alt="Austrian Flag">
-                <p class="country-name">
-                    Austria
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/az.svg" alt="Azerbaijan Flag">
-                <p class="country-name">
-                    Azerbaijan
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bs.svg" alt="Bahamas Flag">
-                <p class="country-name">
-                    Bahamas
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bh.svg" alt="Bahrain Flag">
-                <p class="country-name">
-                    Bahrain
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bd.svg" alt="Bangladeshi Flag">
-                <p class="country-name">
-                    Bangladesh
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bb.svg" alt="Barbados Flag">
-                <p class="country-name">
-                    Barbados
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/by.svg" alt="Belarusian Flag">
-                <p class="country-name">
-                    Belarus
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/be.svg" alt="Belgian Flag">
-                <p class="country-name">
-                    Belgium
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bz.svg" alt="Belize Flag">
-                <p class="country-name">
-                    Belize
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bj.svg" alt="Benin Flag">
-                <p class="country-name">
-                    Benin
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bm.svg" alt="Bermuda Flag">
-                <p class="country-name">
-                    Bermuda
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bt.svg" alt="Bhutan Flag">
-                <p class="country-name">
-                    Bhutan
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bo.svg" alt="Bolivian Flag">
-                <p class="country-name">
-                    Bolivia (Plurinational State of)
-                </p>
-            </div>
-            <div class="country">
-                <img src="https://flagcdn.com/bq.svg" alt="Bonaire, Sint Eustatius and Saba Flag">
-                <p class="country-name">
-                    Bonaire, Sint Eustatius and Saba
-                </p>
-            </div> -->
+			<div class="searchbar">
+				<input
+					type="text"
+					id="search"
+					class="search"
+					placeholder="Search for a country..."
+				/>
+				<button class="searchbtn">
+					<img src="./imgs/search.png" alt="search icon" />
+				</button>
 			</div>
+
+			<div id="country-cards"></div>
 		</main>
 
 		<footer></footer>
