@@ -273,23 +273,14 @@ function displayCountries(countries) {
 		countryCards.append(card);
 	});
 }
-displayCountries(countriesArr);
 
+// figured out how to sort the countries too!
 function sortCountries(countries) {
 	countries = countries.sort((a, b) => a.name.localeCompare(b.name));
 	console.log(countries);
 }
-sortCountries(countriesArr);
 
-// figured out how to sort the countries too!
-searchInput?.addEventListener("keydown", function (event) {
-	if (event.key === "Enter") {
-		event.preventDefault(); // Prevents form submission
-		sortCountries();
-	}
-});
-
-// using the filter method
+// using the filter method for search
 searchInput.addEventListener("input", function () {
 	const searchValue = this.value.toLowerCase();
 	const filtered = countriesArr.filter((country) =>
@@ -297,3 +288,6 @@ searchInput.addEventListener("input", function () {
 	);
 	displayCountries(filtered);
 });
+
+displayCountries(countriesArr);
+sortCountries(countriesArr);
