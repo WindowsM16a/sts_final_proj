@@ -250,14 +250,13 @@ const countriesArr = [
 ];
 
 let countryCards = document.getElementById("country-cards");
-console.log(countryCards);
-console.log(countriesArr.length / 4);
+let searchInput = document.getElementById("search");
 
 function displayCountries(countries) {
+	const card = document.createElement("div");
 	// clearing the country cards div first
 	countryCards.innerHTML = "";
 	countries.forEach((country) => {
-		const card = document.createElement("div");
 		card.classList.add("country-card");
 
 		const flag = document.createElement("img");
@@ -272,9 +271,13 @@ function displayCountries(countries) {
 		countryCards.append(card);
 	});
 }
-displayCountries(countriesArr);
 
-let searchInput = document.getElementById("search");
+function sortCountries(countries) {
+	countries = countries.sort((a, b) => a.name.localeCompare(b.name));
+	console.log(countries);
+}
+
+// figured out how to sort the countries too!
 searchInput?.addEventListener("keydown", function (event) {
 	if (event.key === "Enter") {
 		event.preventDefault(); // Prevents form submission
@@ -283,7 +286,7 @@ searchInput?.addEventListener("keydown", function (event) {
 });
 
 // using the filter method
-document.getElementById("search").addEventListener("input", function () {
+searchInput.addEventListener("input", function () {
 	const searchValue = this.value.toLowerCase();
 	const filtered = countriesArr.filter((country) =>
 		country.name.toLowerCase().includes(searchValue)
@@ -291,9 +294,5 @@ document.getElementById("search").addEventListener("input", function () {
 	displayCountries(filtered);
 });
 
-// figured out how to sort the countries too!
-function sortCountries(countries) {
-	countries = countries.sort((a, b) => a.name.localeCompare(b.name));
-	console.log(countries);
-}
+displayCountries(countriesArr);
 sortCountries(countriesArr);
