@@ -250,15 +250,13 @@ const countriesArr = [
 ];
 
 let countryCards = document.getElementById("country-cards");
-countryCards.classList.add("country-cards");
 let searchInput = document.getElementById("search");
 
 function displayCountries(countries) {
-	const card = document.createElement("div");
 	// clearing the country cards div first
 	countryCards.innerHTML = "";
 	countries.forEach((country) => {
-		card.id = "country-card";
+		const card = document.createElement("div");
 		card.classList.add("country-card");
 
 		const flag = document.createElement("img");
@@ -277,10 +275,16 @@ function displayCountries(countries) {
 // figured out how to sort the countries too!
 function sortCountries(countries) {
 	countries = countries.sort((a, b) => a.name.localeCompare(b.name));
-	console.log(countries);
 }
 
-// using the filter method for search
+searchInput.addEventListener("keydown", function (event) {
+	if (event.key === "Enter") {
+		event.preventDefault(); // Prevents form submission
+		sortCountries();
+	}
+});
+
+// using the filter method
 searchInput.addEventListener("input", function () {
 	const searchValue = this.value.toLowerCase();
 	const filtered = countriesArr.filter((country) =>
